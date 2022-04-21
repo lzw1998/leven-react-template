@@ -9,7 +9,7 @@
     "lib": ["es7", "dom"],
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
@@ -27,5 +27,5 @@
     "utils/*": ["src/utils/*"]
   },
   "exclude": ["node_modules"],
-  "include": ["src/**/*.tsx", "src/**/*.ts", "src/index.js"]
+  "include": ["src/**/*.tsx", "src/**/*.ts"]
 }

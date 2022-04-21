@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['airbnb'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -18,12 +18,24 @@ module.exports = {
     'no-console': 0,
     'import/no-extraneous-dependencies': 0,
     'max-len': 0,
+    'import/extensions': [
+      2,
+      'always',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
   },
   overrides: [
     {
       files: ['*.js', '*.jsx'],
       extends: [
         'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
         'plugin:import/recommended',
         'plugin:import/errors',
         'plugin:import/warnings',
@@ -46,6 +58,7 @@ module.exports = {
         'jsx-a11y/click-events-have-key-events': ['warn'],
         'jsx-a11y/no-noninteractive-element-interactions': ['warn'],
         'jsx-a11y/no-autofocus': ['warn'],
+        'jsx-quotes': ['error', 'prefer-single'],
         'object-curly-spacing': ['error', 'always'],
       },
       globals: {
@@ -58,6 +71,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:import/typescript',
         'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
         'plugin:jsx-a11y/recommended',
       ],
       parser: '@typescript-eslint/parser',
@@ -88,6 +102,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         semi: ['error', 'always'],
         'keyword-spacing': ['error', { before: true, after: true }],
+        'jsx-quotes': ['error', 'prefer-single'],
         'jsx-a11y/click-events-have-key-events': ['warn'],
         'jsx-a11y/no-noninteractive-element-interactions': ['warn'],
         'jsx-a11y/no-autofocus': ['warn'],
