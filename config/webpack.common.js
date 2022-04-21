@@ -1,5 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const WebpackBar = require('webpackbar');
 const paths = require('./paths');
 const { NODE_ENV, moduleFileExtensions } = require('./constants');
 
@@ -90,5 +93,31 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: paths.appHtml, filename: 'index.html', inject: 'body' })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: paths.appHtml, filename: 'index.html', inject: 'body' }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          context: paths.appPublic,
+          from: '*',
+          to: paths.appBuild,
+          toType: 'dir',
+          globOptions: {
+            dot: true,
+            gitignore: true,
+            ignore: ['**/index.html'],
+          },
+        },
+      ],
+    }),
+    new WebpackBar({
+      name: isEnvDevelopment ? 'RUNNING' : 'BUNDLING',
+      color: isEnvDevelopment ? '#52c41a' : '#722ed1',
+    }),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        configFile: paths.appTsConfig,
+      },
+    }),
+  ],
 };
