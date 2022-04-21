@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/lzw1998/leven-react-template/compare/v0.2.0...v0.3.0) (2022-04-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 版本更新
+
+### ♻️ Code Refactoring | 代码重构
+
+* 💡 移除非必要的项目文件 ([7d8d458](https://github.com/lzw1998/leven-react-template/commit/7d8d4584763d9da23d0f8a974ec62ba514610962))
+
 ## [0.2.0](https://github.com/lzw1998/leven-react-template/compare/v0.1.0...v0.2.0) (2022-04-21)
 
 
