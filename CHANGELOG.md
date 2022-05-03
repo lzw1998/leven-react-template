@@ -1,5 +1,14 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [0.4.0](https://github.com/lzw1998/leven-react-template/compare/v0.3.0...v0.4.0) (2022-05-03)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 🤖 修复reactBrowser路由无效，修改eslint/stylelint/ts等配置文件，修改paths ([78452ec](https://github.com/lzw1998/leven-react-template/commit/78452ec83875ff73afb1530ce956238971e4709a))
+
 ## [0.3.0](https://github.com/lzw1998/leven-react-template/compare/v0.2.0...v0.3.0) (2022-04-21)
 
 
