@@ -24,7 +24,5 @@ module.exports = {
   appPackageJson: resolveApp('package.json'),
   appNodeModules: resolveApp('node_modules'),
   appSrc: resolveApp('src'),
-  appSrcComponents: resolveApp('src/components'),
-  appSrcUtils: resolveApp('src/utils'),
   appTsConfig: resolveApp('tsconfig.json'),
 };
